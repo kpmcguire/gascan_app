@@ -1,0 +1,1 @@
+web: gunicorn gascan.wsgi --log-file -

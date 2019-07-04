@@ -1,0 +1,19 @@
+<h1>Gascan</h1>
+<h2>{{ env }}</h2>
+<h2><a href="{% url 'cars:index'%}">Your Cars</a></h2>
+
+{% if not user_cars %}
+
+  <p>No cars are available.</p>
+  <p><a href="{% url 'cars:car_new' %}">Register a car</a></p>
+
+{% else %}
+
+<ul>
+  {% for car in user_cars %}
+  <li><a href="{% url 'cars:detail' car.id %}">{{ car.name }}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+<h2><a href="{% url 'fillups:fillup_new'%}">Log a new Fillup</a></h2>

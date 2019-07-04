@@ -1,0 +1,15 @@
+<h1><a href="{% url 'cars:detail' fillup.car.id %}">{{ fillup.car }}</a></h1>
+
+{% if error_message %}
+  <p><strong>{{error_message}}</strong></p>
+{% endif %}
+
+<ul>
+  <li>Fillup Date: {{ fillup.fillup_date }}</li>
+  <li>Odometer Reading: {{ fillup.odometer }}</li>
+  <li>Gallons of Gas: {{ fillup.gas_gallons }}</li>
+  <li>Miles Driven: {{ fillup.miles_driven }}</li>
+  <li>Fillup MPG: {{ fillup.mpg }}</li>
+
+</ul>
+

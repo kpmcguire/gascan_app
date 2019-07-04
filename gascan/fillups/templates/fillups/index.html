@@ -1,0 +1,11 @@
+{% load static %}
+
+{% if fillup_list %}
+<ul>
+  {% for fillup in fillup_list %}
+  <li><a href="{% url 'fillups:detail' fillup.id %}">{{ fillup.fillup_date }}</a></li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No fillups available.</p>
+{% endif %}
