@@ -1,1 +1,1 @@
-web: gunicorn gascan.wsgi --log-file -
+web: gunicorn --chdir gascan gascan.wsgi --log-file -
