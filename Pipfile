@@ -13,6 +13,7 @@ django-dotenv = "*"
 django-heroku = "*"
 gunicorn = "*"
 psycopg2-binary = "*"
+whitenoise = "*"
 
 [requires]
 python_version = "3.7.3"
