@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block title %}<title>Gascan</title>{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Add additional CSS in static file -->
+  {% load static %}
+  {% load compress %}
+
+  {% compress css %}
+      <link rel="stylesheet" type="text/x-scss" href="{% static "scss/main.scss" %}" />
+  {% endcompress %}
+
+</head>
+<body class="sans-serif">
+
+<div class="header-container">
+    <div class="center mw9">
+        <nav class="dt w-100 border-box ph3 ph5-ns">
+          <a class="dtc v-mid mid-gray link dim w-25" href="/" title="Home">
+            <img class="gascan-logo" src="{% static 'images/gascan.svg' %}" alt="Gascan">
+          </a>
+          <div class="dtc v-mid w-75 tr">
+            <a class="link dim dark-gray f6 f5-ns dib mr3 mr4-ns" href="/cars" >Cars</a>
+            <a class="link dim dark-gray f6 f5-ns dib mr3 mr4-ns" href="/fillups" >Fillups</a>
+            <a class="link dim dark-gray f6 f5-ns dib" href="#" >About Us</a>
+          </div>
+        </nav>
+    </div>
+</div>
+
+<div class="center mw9 pa2 ph5-ns lh-copy gascan-content">
+  {% block content %}
+  {% endblock %}
+</div>
+
+<footer>
+    <div class="center ma2 pa3 ph5-ns mw9 flex items-center">
+        <div class="m">
+            <span class="letter">M</span>
+        </div>
+        <p>
+          <a href="https://kpmcguire.github.io">McGuire App Company</a>
+        </p>
+
+    </div>
+</footer>  
+</body>
+</html>

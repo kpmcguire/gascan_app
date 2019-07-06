@@ -1,0 +1,118 @@
+@import 'colors.scss';
+@import 'tachyons.min.css';
+
+.gascan-logo {
+    display: block;
+    margin-top: -1.5rem;
+    max-width: 12rem;
+}
+
+
+.header-container {
+    background-color: $brand-main;
+
+    nav {
+        a {
+            color: white;
+
+            &:hover, &:focus {
+                color: lighten($brand-accent, 20);
+                text-decoration: underline;
+                opacity: 1;
+            }
+            &:active {
+                color: lighten($brand-accent, 10);
+                opacity: 1;
+            }            
+        }
+    }
+}
+
+.focus-outline {
+    &:focus {
+        box-shadow: 0 0 0 2px yellowgreen;
+    }
+}
+
+footer {
+    background-color: $brand-accent;
+    
+    .m {
+        background-color: $brand-main;
+        color: $brand-accent;
+        text-align: center;
+        font-weight: bold;
+        font-size: 2em;
+        padding: 0;
+	    font-family: Verdana,Geneva,sans-serif; 
+        padding: 0em 0.4em;
+        display: inline;
+        margin-right: 0.25em;
+        
+        .letter {
+            display:inline-block;
+            -webkit-transform:scale(1.5,1); /* Safari and Chrome */
+            -moz-transform:scale(1.5,1); /* Firefox */
+            -ms-transform:scale(1.5,1); /* IE 9 */
+            -o-transform:scale(1.5,1); /* Opera */
+            transform:scale(1.5,1); /* W3C */
+        }
+
+        + p {
+            color: darken($brand-main, 5)
+        }
+    }
+
+    a {
+        color: $brand-main;
+        text-decoration: none;
+
+        &:hover, &:focus {
+            color: darken($brand-main, 20);
+            text-decoration: underline;
+        }
+        &:active {
+            color: darken($brand-main, 10);
+        }
+    }
+}
+
+// for sticky footer
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.gascan-content {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+h2 {
+    color: darken($brand-main, 5);
+}
+
+.list {
+    padding-left: 0;
+
+    li:last-child {
+        border-bottom: 0;
+    }
+}

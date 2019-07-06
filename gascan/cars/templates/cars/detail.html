@@ -1,20 +1,24 @@
-<h1>{{ car.name }}</h1>
+{% extends "base_generic.html" %}
+{% block content %}
+
+<h2>{{ car.name }}</h2>
 
 {% if error_message %}
   <p><strong>{{error_message}}</strong></p>
 {% endif %}
 
-<ul>
-  <li>Make: {{ car.make }}</li>
-  <li>Model: {{ car.model }}</li>
-  <li>Year: {{ car.year }}</li>
-  <li>Starting Odometer: {{ car.starting_odometer }}</li>
-  <li>Avg. Mileage: {{ car.avg_mileage }}</li>
+<ul class="list">
+  <li><strong>Make:</strong> {{ car.make }}</li>
+  <li><strong>Model:</strong> {{ car.model }}</li>
+  <li><strong>Year:</strong> {{ car.year }}</li>
+  <li><strong>Starting Odometer:</strong> {{ car.starting_odometer }}</li>
+  <li><strong>Avg. Mileage:</strong> {{ car.avg_mileage }}</li>
 </ul>
 
 <h2>Fillups</h2>
-<ul>
+<ul class="list ba b--light-silver br3">
 {% for fillup in car.fillup_set.all %}
-  <li><a href="{% url 'fillups:detail' fillup.id %}">{{fillup}} - {{fillup.mpg}} MPG</a></li>
+  <li class="ph3 pv2 bb b--light-silver"><a href="{% url 'fillups:detail' fillup.id %}">{{fillup}} - {{fillup.mpg}} MPG</a></li>
 {% endfor %}
 </ul>
+{% endblock %}

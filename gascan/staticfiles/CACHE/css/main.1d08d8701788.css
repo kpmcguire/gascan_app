@@ -1,0 +1,93 @@
+@import url(/static/scss/tachyons.min.css?f7f1453350e8);
+/* line 4, staticfiles/scss/main.scss */
+.gascan-logo {
+  display: block;
+  margin-top: -2rem;
+  max-width: 12rem; }
+
+/* line 11, staticfiles/scss/main.scss */
+.header-container {
+  background-color: #ea0507; }
+  /* line 15, staticfiles/scss/main.scss */
+  .header-container nav a {
+    color: white; }
+    /* line 18, staticfiles/scss/main.scss */
+    .header-container nav a:hover, .header-container nav a:focus {
+      color: white;
+      text-decoration: underline; }
+    /* line 22, staticfiles/scss/main.scss */
+    .header-container nav a:active {
+      color: #f7de6d; }
+
+/* line 30, staticfiles/scss/main.scss */
+.focus-outline:focus {
+  box-shadow: 0 0 0 2px yellowgreen; }
+
+/* line 35, staticfiles/scss/main.scss */
+footer {
+  background-color: #F5D33C; }
+  /* line 38, staticfiles/scss/main.scss */
+  footer .m {
+    background-color: #ea0507;
+    color: #F5D33C;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    padding: 0;
+    font-family: Verdana,Geneva,sans-serif;
+    padding: 0em 0.4em;
+    display: inline;
+    margin-right: 0.25em; }
+    /* line 50, staticfiles/scss/main.scss */
+    footer .m .letter {
+      display: inline-block;
+      -webkit-transform: scale(1.5, 1);
+      /* Safari and Chrome */
+      -moz-transform: scale(1.5, 1);
+      /* Firefox */
+      -ms-transform: scale(1.5, 1);
+      /* IE 9 */
+      -o-transform: scale(1.5, 1);
+      /* Opera */
+      transform: scale(1.5, 1);
+      /* W3C */ }
+    /* line 59, staticfiles/scss/main.scss */
+    footer .m + p {
+      color: #d10406; }
+  /* line 64, staticfiles/scss/main.scss */
+  footer a {
+    color: #ea0507;
+    text-decoration: none; }
+    /* line 68, staticfiles/scss/main.scss */
+    footer a:hover, footer a:focus {
+      color: #860304;
+      text-decoration: underline; }
+    /* line 72, staticfiles/scss/main.scss */
+    footer a:active {
+      color: #b80406; }
+
+/* line 80, staticfiles/scss/main.scss */
+html, body {
+  height: 100%; }
+
+/* line 84, staticfiles/scss/main.scss */
+body {
+  display: flex;
+  flex-direction: column; }
+
+/* line 89, staticfiles/scss/main.scss */
+.gascan-content {
+  flex: 1 0 auto; }
+
+/* line 93, staticfiles/scss/main.scss */
+footer {
+  flex-shrink: 0; }
+
+/* line 97, staticfiles/scss/main.scss */
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden; }
