@@ -27,7 +27,7 @@ urlpatterns = [
     path('register/', register, name='register'),
     path('', home_index, name='home_index'),
     path('favicon.ico', RedirectView.as_view(
-        url=settings.STATIC_URL + 'images/favicon.png')),
+        url=settings.STATIC_URL + 'gascan/images/favicon.png')),
 ]
 
 

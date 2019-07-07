@@ -4,14 +4,14 @@
   {% block title %}<title>Gascan</title>{% endblock %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Add additional CSS in static file -->
+
   {% load static %}
   {% load compress %}
 
   {% compress css %}
-      <link rel="stylesheet" type="text/x-scss" href="{% static "scss/main.scss" %}" />
+  <link rel="stylesheet" type="text/x-scss" href="{% static "scss/main.scss" %}" />
   {% endcompress %}
-  <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}"/>
+  
 </head>
 <body class="sans-serif">
 
