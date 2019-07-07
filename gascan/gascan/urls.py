@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from cars.views import register, home_index
 from django.views.generic.base import RedirectView
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('cars/', include('cars.urls')),
@@ -28,7 +29,7 @@ urlpatterns = [
     path('', home_index, name='home_index'),
     path('favicon.ico', RedirectView.as_view(
         url=settings.STATIC_URL + 'gascan/images/favicon.png')),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
 
