@@ -6,11 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   {% load static %}
-  {% load compress %}
-
-  {% compress css %}
-  <link rel="stylesheet" type="text/x-scss" href="{% static "scss/main.scss" %}" />
-  {% endcompress %}
+  
+  <link rel="stylesheet" type="text/css" href="/static/css/tachyons.min.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/main.css">
   
   <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}"/>
 </head>
@@ -32,8 +30,10 @@
 </div>
 
 <div class="center mw9 pa2 ph5-ns lh-copy gascan-content">
-  {% block content %}
-  {% endblock %}
+  <div class="gascan-content-inner">
+    {% block content %}
+    {% endblock %}
+  </div>
 </div>
 
 <footer>

@@ -7,7 +7,6 @@
     max-width: 12rem;
 }
 
-
 .header-container {
     background-color: $brand-main;
 
@@ -90,6 +89,11 @@ body {
 
 .gascan-content {
     flex: 1 0 auto;
+}
+
+.gascan-content-inner {
+    display: block;
+    max-width: 1000px;
 }
 
 footer {
