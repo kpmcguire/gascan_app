@@ -49,7 +49,12 @@ def register(request):
       form = RegistrationForm()
   return render(request, 'accounts/register.html', {'form': form})
 
+def account(request):
+  return render(request, 'accounts/account.html')
+
 def home_index(request):
-  user_cars = Car.objects.filter(user=request.user).order_by('year')
-  return render(request, 'cars/home_index.html', context={'user_cars': user_cars})
-  
+  if request.user.is_authenticated:
+    user_cars = Car.objects.filter(user=request.user).order_by('year')
+    return render(request, 'cars/home_index.html', context={'user_cars': user_cars})   
+  else:
+    return render(request, 'cars/home_index.html')

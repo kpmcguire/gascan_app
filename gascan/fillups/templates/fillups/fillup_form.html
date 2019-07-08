@@ -1,12 +1,12 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <h1>New</h1>
+  <h2>New Fillup</h2>
   <form action="" method="post">
     {% csrf_token %}
-    <table>
-    {{ form.as_table }}
-    </table>
-    <input type="submit" value="Submit">
+
+    {{ form }}
+
+    <input class="gascan-button" type="submit" value="Submit">
   </form>
 {% endblock %}

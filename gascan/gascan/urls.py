@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
-from cars.views import register, home_index
+from cars.views import account, register, home_index
 from django.views.generic.base import RedirectView
 from django.conf.urls.static import static
 
@@ -26,6 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('register/', register, name='register'),
+    path('account/', account, name='account'),
     path('', home_index, name='home_index'),
     path('favicon.ico', RedirectView.as_view(
         url=settings.STATIC_URL + 'gascan/images/favicon.png')),

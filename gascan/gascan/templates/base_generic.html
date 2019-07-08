@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   {% load static %}
-  
+
   <link rel="stylesheet" type="text/css" href="/static/css/tachyons.min.css">
   <link rel="stylesheet" type="text/css" href="/static/css/main.css">
   
@@ -20,11 +20,17 @@
           <a class="dtc v-mid mid-gray link dim w-25" href="/" title="Home">
             <img class="gascan-logo" src="{% static 'images/gascan.svg' %}" alt="Gascan">
           </a>
+          {% if user.is_authenticated %}
           <div class="dtc v-mid w-75 tr">
             <a class="link dim dark-gray f6 f5-ns dib mr3 mr4-ns" href="/cars" >Cars</a>
             <a class="link dim dark-gray f6 f5-ns dib mr3 mr4-ns" href="/fillups" >Fillups</a>
-            <a class="link dim dark-gray f6 f5-ns dib" href="#" >About Us</a>
+            <a class="link dim dark-gray f6 f5-ns dib" href="/accounts/logout" >Logout</a>
           </div>
+          {% else %}
+            <div class="dtc v-mid w-75 tr">
+              <a class="link dim dark-gray f6 f5-ns dib" href="/accounts/login" >Login</a>
+            </div>          
+          {% endif %}
         </nav>
     </div>
 </div>

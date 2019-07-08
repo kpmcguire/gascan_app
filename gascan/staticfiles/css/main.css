@@ -2,7 +2,7 @@
 /* line 4, scss/main.scss */
 .gascan-logo {
   display: block;
-  margin-top: -1.5rem;
+  margin-top: -1rem;
   max-width: 12rem;
 }
 
@@ -31,16 +31,85 @@
 
 /* line 31, scss/main.scss */
 .focus-outline:focus {
-  -webkit-box-shadow: 0 0 0 2px yellowgreen;
-          box-shadow: 0 0 0 2px yellowgreen;
+  box-shadow: 0 0 0 4px yellowgreen;
 }
 
 /* line 36, scss/main.scss */
+.gascan-button {
+  background-color: #ea0507;
+  color: white;
+  border: 0;
+  text-transform: capitalize;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25em;
+  cursor: pointer;
+  margin: 1em 0;
+}
+
+/* line 46, scss/main.scss */
+.gascan-button:hover, .gascan-button:focus {
+  background-color: #9f0305;
+}
+
+/* line 50, scss/main.scss */
+.gascan-button:active {
+  background-color: #860304;
+}
+
+/* line 55, scss/main.scss */
+a.gascan-button {
+  text-decoration: none;
+}
+
+/* line 61, scss/main.scss */
+form label {
+  display: block;
+  width: 100%;
+}
+
+/* line 67, scss/main.scss */
+form select {
+  width: 100%;
+  line-height: 1.4;
+  padding: 0.25em 0.5em;
+}
+
+/* line 75, scss/main.scss */
+form select:focus {
+  box-shadow: 0 0 0 4px #F5D33C;
+}
+
+/* line 79, scss/main.scss */
+form select + label {
+  margin-top: 0.5em;
+}
+
+/* line 85, scss/main.scss */
+form input[type=text], form input[type=email], form input[type=password], form input[type=number] {
+  width: 100%;
+  border: 1px solid gray;
+  outline: 0;
+  line-height: 1.4;
+  border-radius: 0.2em;
+  padding: 0.25em 0.5em;
+}
+
+/* line 93, scss/main.scss */
+form input[type=text]:focus, form input[type=email]:focus, form input[type=password]:focus, form input[type=number]:focus {
+  box-shadow: 0 0 0 4px #F5D33C;
+}
+
+/* line 98, scss/main.scss */
+form input + label {
+  margin-top: 0.5em;
+}
+
+/* line 105, scss/main.scss */
 footer {
   background-color: #F5D33C;
 }
 
-/* line 39, scss/main.scss */
+/* line 108, scss/main.scss */
 footer .m {
   background-color: #ea0507;
   color: #F5D33C;
@@ -54,7 +123,7 @@ footer .m {
   margin-right: 0.25em;
 }
 
-/* line 51, scss/main.scss */
+/* line 120, scss/main.scss */
 footer .m .letter {
   display: inline-block;
   -webkit-transform: scale(1.5, 1);
@@ -66,64 +135,60 @@ footer .m .letter {
   /* W3C */
 }
 
-/* line 60, scss/main.scss */
+/* line 129, scss/main.scss */
 footer .m + p {
   color: #d10406;
 }
 
-/* line 65, scss/main.scss */
+/* line 134, scss/main.scss */
 footer a {
   color: #ea0507;
   text-decoration: none;
 }
 
-/* line 69, scss/main.scss */
+/* line 138, scss/main.scss */
 footer a:hover, footer a:focus {
   color: #860304;
   text-decoration: underline;
 }
 
-/* line 73, scss/main.scss */
+/* line 142, scss/main.scss */
 footer a:active {
   color: #b80406;
 }
 
-/* line 81, scss/main.scss */
+/* line 150, scss/main.scss */
 html, body {
   height: 100%;
 }
 
-/* line 85, scss/main.scss */
+/* line 154, scss/main.scss */
 body {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
           flex-direction: column;
 }
 
-/* line 90, scss/main.scss */
+/* line 159, scss/main.scss */
 .gascan-content {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
           flex: 1 0 auto;
 }
 
-/* line 94, scss/main.scss */
+/* line 163, scss/main.scss */
 .gascan-content-inner {
   display: block;
   max-width: 1000px;
 }
 
-/* line 99, scss/main.scss */
+/* line 168, scss/main.scss */
 footer {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
 }
 
-/* line 103, scss/main.scss */
+/* line 172, scss/main.scss */
 .sr-only {
   position: absolute;
   left: -10000px;
@@ -133,17 +198,17 @@ footer {
   overflow: hidden;
 }
 
-/* line 112, scss/main.scss */
+/* line 181, scss/main.scss */
 h2 {
   color: #d10406;
 }
 
-/* line 116, scss/main.scss */
+/* line 185, scss/main.scss */
 .list {
   padding-left: 0;
 }
 
-/* line 119, scss/main.scss */
-.list li:last-child {
+/* line 188, scss/main.scss */
+.list :last-child {
   border-bottom: 0;
 }

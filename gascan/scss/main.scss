@@ -3,7 +3,7 @@
 
 .gascan-logo {
     display: block;
-    margin-top: -1.5rem;
+    margin-top: -1rem;
     max-width: 12rem;
 }
 
@@ -29,9 +29,78 @@
 
 .focus-outline {
     &:focus {
-        box-shadow: 0 0 0 2px yellowgreen;
+        box-shadow: 0 0 0 4px yellowgreen;
     }
 }
+
+.gascan-button {
+    background-color: $brand-main;
+    color: white;
+    border: 0;
+    text-transform: capitalize;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25em;
+    cursor: pointer;
+    margin: 1em 0;
+
+    &:hover, &:focus {
+        background-color: darken($brand-main, 15);
+    }
+
+    &:active {
+        background-color: darken($brand-main, 20);
+    }        
+}
+
+a.gascan-button {
+    text-decoration: none;
+}
+
+form {
+
+    label {
+        display: block;
+        width: 100%;
+
+    }
+
+    select {
+        width: 100%;
+        // border: 1px solid gray;
+        // outline: 0;
+        line-height: 1.4;
+        // border-radius: 0.2em;
+        padding: 0.25em 0.5em;
+
+        &:focus {
+            box-shadow: 0 0 0 4px $brand-accent;
+        }        
+
+        + label {
+            margin-top: 0.5em;
+        }        
+    }
+
+    input {
+        &[type=text], &[type=email], &[type=password], &[type=number] {
+            width: 100%;
+            border: 1px solid gray;
+            outline: 0;
+            line-height: 1.4;
+            border-radius: 0.2em;
+            padding: 0.25em 0.5em;
+
+            &:focus {
+                box-shadow: 0 0 0 4px $brand-accent;
+            }
+        }
+
+        + label {
+            margin-top: 0.5em;
+        }
+    }
+}
+
 
 footer {
     background-color: $brand-accent;
@@ -116,7 +185,7 @@ h2 {
 .list {
     padding-left: 0;
 
-    li:last-child {
+    :last-child {
         border-bottom: 0;
     }
 }
