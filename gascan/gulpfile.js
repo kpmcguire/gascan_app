@@ -67,8 +67,7 @@ var package = require('./package.json');
 var pug = require('gulp-pug');
 
 // Scripts
-var jshint = require('gulp-jshint');
-var stylish = require('jshint-stylish');
+
 var concat = require('gulp-concat');
 var uglify = require('gulp-terser');
 var optimizejs = require('gulp-optimize-js');
@@ -163,21 +162,7 @@ var buildScripts = function (done) {
 
 };
 
-// Lint scripts
-var lintScripts = function (done) {
 
-	// Make sure this feature is activated before running
-	if (!settings.scripts) return done();
-
-	// Lint scripts
-	src(paths.scripts.input)
-		.pipe(jshint())
-		.pipe(jshint.reporter('jshint-stylish'));
-
-	// Signal completion
-	done();
-
-};
 
 // Process, lint, and minify Sass files
 var buildStyles = function (done) {
@@ -312,7 +297,6 @@ exports.default = series(
 	copyRequiredFiles,
 	parallel(
 		buildScripts,
-		lintScripts,
 		buildStyles,
     buildSVGs,
     buildPug,
