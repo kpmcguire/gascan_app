@@ -11,6 +11,10 @@
   <link rel="stylesheet" type="text/css" href="/static/css/main.css">
   
   <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
 </head>
 <body class="sans-serif">
 
@@ -35,8 +39,8 @@
     </div>
 </div>
 
-<div class="center mw9 pa2 ph5-ns lh-copy gascan-content">
-  <div class="gascan-content-inner">
+<div class="pa2 ph5-ns lh-copy gascan-content">
+  <div class="gascan-content-inner center mw9">
     {% block content %}
     {% endblock %}
   </div>

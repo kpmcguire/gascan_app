@@ -10,14 +10,18 @@
     <p>No cars are available.</p>
     <p><a href="{% url 'cars:car_new' %}">Register a car</a></p>
   {% else %}
-  <h2>Home</h2>
-  <h3><a href="{% url 'cars:index'%}">Your Cars</a></h3>
-  <ul>
+
+  <h2>Your Cars</h2>
+  
+  <ul class="list ba b--light-silver br3">
     {% for car in user_cars %}
-    <li><a href="{% url 'cars:detail' car.id %}">{{ car.name }}</a></li>
+    <li class="ph3 pv2 bb b--light-silver"><a href="{% url 'cars:detail' car.id %}">{{ car.name }}</a></li>
     {% endfor %}
   </ul>
-  <h3><a href="{% url 'fillups:fillup_new'%}">Log a new Fillup</a></h3>
+  
+  <p><a href="{% url 'cars:index'%}">View All Cars</a></p>
+
+  <p class="mt4"><a class="gascan-button" href="{% url 'fillups:fillup_new'%}">Log a new Fillup</a></p>
   {% endif %}
 
 {% else %}

@@ -5,8 +5,54 @@
   <form action="" method="post">
     {% csrf_token %}
 
-    {{ form }}
+    {{ form.as_p }}
+
+    <p id="status"></p>
+    <p><a id="find-me" class="gascan-button" href="#">Get My Location</a></p>
 
     <input class="gascan-button" type="submit" value="Submit">
   </form>
+  <script>
+    flatpickr("#id_fillup_date", {
+        enableTime: true,
+        dateFormat: "Y-m-d H:i",
+    });
+
+    function geoFindMe() {
+
+      const status = document.querySelector('#status');
+      const latitude_input = document.querySelector('#id_latitude');
+      const longitude_input = document.querySelector('#id_longitude');
+      
+      function success(position) {
+        let latitude  = position.coords.latitude;
+        let longitude = position.coords.longitude;
+
+        latitude = latitude.toFixed(8);
+        longitude = longitude.toFixed(8);
+
+        status.textContent = '';
+
+        latitude_input.value = `${latitude}`;
+        longitude_input.value = `${longitude}`; 
+
+      }
+
+      function error() {
+        status.textContent = 'Unable to retrieve your location';
+      }
+
+      if (!navigator.geolocation) {
+        status.textContent = 'Geolocation is not supported by your browser';
+      } else {
+        status.textContent = 'Locating…';
+        navigator.geolocation.getCurrentPosition(success, error);
+      }
+
+    }
+
+    document.querySelector('#find-me').addEventListener('click', geoFindMe);
+
+
+  </script>
 {% endblock %}

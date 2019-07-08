@@ -21,4 +21,6 @@
   <li class="ph3 pv2 bb b--light-silver"><a href="{% url 'fillups:detail' fillup.id %}">{{fillup}} - {{fillup.mpg}} MPG</a></li>
 {% endfor %}
 </ul>
+<p><a class="gascan-button" href="{% url 'fillups:fillup_new'%}">Log a new Fillup</a></p>
+
 {% endblock %}
