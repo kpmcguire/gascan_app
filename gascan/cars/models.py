@@ -21,5 +21,6 @@ class Car(models.Model):
   def avg_mileage(self):
     fillups = Fillup.objects.filter(car=self)
     if fillups.count() > 0:
-      return sum(fillup.mpg for fillup in fillups) / fillups.count()
+      full_milage = sum(fillup.mpg for fillup in fillups) / fillups.count()
+      return round(full_milage, 3)
 

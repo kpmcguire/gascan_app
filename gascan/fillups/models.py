@@ -31,4 +31,5 @@ class Fillup(models.Model):
 
   @property
   def mpg(self):
-    return self.miles_driven / self.gas_gallons 
+    mileage = self.miles_driven / self.gas_gallons
+    return round(mileage, 3)
